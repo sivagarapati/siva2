@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJs | HTTP services</title>
+	<meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <script src="Controller.js"></script>
+
+
+</head>
+<body ng-app="myApp">
+    <div ng-controller="people">
+            <h2>Name and Ages of people</h2>
+            <p ng-repeat="person in persons">
+                {{"Name: "+person.Name + " Age : " + person.Age }}</p>
+            
+    </div>
+    <div ng-controller="namectrl">
+        hello
+        <p>{{name}}</p>
+    </div>
+</body>
+</html>
