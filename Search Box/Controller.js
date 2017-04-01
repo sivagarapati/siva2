@@ -10,19 +10,3 @@ app.controller("people", function($scope, $http) {
             $scope.persons = response.data;
         });
 });
-
-
-
-//app.service("dataBase", function ($http) {
-//    return {
-//        getData: function () {
-//            return $http.get("database.json",{responseType:"json"});
-//        }
-//    }
-//})
-
-//app.controller("peopleCtrl", function ($scope, dataBase) {
-//    dataBase.getData().success(function (records) {
-//        $scope.persons = records;
-//    })
-//})
