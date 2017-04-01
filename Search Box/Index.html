@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJs | Search box</title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <script src="Controller.js"></script>
+
+
+</head>
+
+<body>
+    <h1>search box</h1>
+    <input type="text" ng-model="searchBox">
+    <div ng-controller="people">
+        <h2>Name and Ages of people</h2>
+        <ul>
+            <li ng-repeat="person in persons | filter:searchBox">
+                {{"Name: "+person.Name + " Age : " + person.Age }}
+            </li>
+        </ul>
+
+    </div>
+</body>
+
+</html>
