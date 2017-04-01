@@ -1,5 +1,18 @@
 ﻿var app = angular.module('myApp', []);
 
+
+
+app.controller("people", function($scope, $http) {
+    var self = this;
+    //$http.get("http://127.0.0.1/../data.json")
+    $http.get("http://localhost:3000/records")
+        .then(function(response) {
+            $scope.persons = response.data;
+        });
+});
+
+
+
 //app.service("dataBase", function ($http) {
 //    return {
 //        getData: function () {
@@ -13,16 +26,3 @@
 //        $scope.persons = records;
 //    })
 //})
-
-
-app.controller("people", function ($scope, $http) {
-    $http.get("http://127.0.0.1/AngulatJs/httpServices/data.json")
-        .then(function (response) {
-            $scope.persons = response.records;
-            $scope.name = "siva";
-        });
-});
-
-app.controller("namectrl", function ($scope) {
-    $scope.name = "Siva";
-})
