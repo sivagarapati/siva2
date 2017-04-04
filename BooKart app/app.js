@@ -1,7 +1,11 @@
 var app = angular.module("myApp", []);
 
-app.controller("bookartCtrl", bookartCtrl);
+app.controller("headerCtrl", headerCtrl);
 
-function bookartCtrl() {
+function headerCtrl($scope) {
+    $scope.appName = {
+        title: "BookART",
+        tagLine: "we have over 1 million Books"
+    }
 
 }

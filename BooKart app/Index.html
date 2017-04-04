@@ -12,12 +12,12 @@
 </head>
 
 <body>
-    <div ng-controller="bookartCtrl">
+    <div ng-controller="headerCtrl">
         <div class="container">
             <div class="row">
                 <div id="header-wrapper">
-                    <span class="logo pull-left">BOOKART</span>
-                    <span class="tagline pull-left">we have over 1 million Books</span>
+                    <span class="logo pull-left">{{appName.title}}</span>
+                    <span class="tagline pull-left">{{appName.tagLine}}</span>
                     <div class="nav-wrapper pull-left">
                         <ul class="nav nav-pills">
                             <li class="active"><a href="#">Books</a></li>
