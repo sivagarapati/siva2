@@ -20,6 +20,8 @@ app.provider("date", function() {
         }
     }
 });
+
+
 app.config(function(dateProvider) {
     var time = dataProvider.$get().devshowDate();
     if (time > 0 && tme < 12) {
