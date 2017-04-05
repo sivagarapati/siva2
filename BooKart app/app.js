@@ -9,3 +9,13 @@ function headerCtrl($scope) {
     }
 
 }
+
+app.controller("booklistCtrl", booklistCtrl);
+
+function booklistCtrl($scope, $http) {
+    var self = this;
+    $http.get("http://localhost:3000/books")
+        .then(function(response) {
+            $scope.books = response.data;
+        });
+}
