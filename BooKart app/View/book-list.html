@@ -1,17 +1,17 @@
-<div id="bookListWrapper">
+<div id="bookListWrapper" class="container">
     <form role="form">
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="search here..">
+            <input type="text" class="form-control" ng-model="searchStr" placeholder="search here..">
         </div>
     </form>
     <div class="row">
         <ul class="list-unstyled">
-            <li class="book" ng-repeat="book in books">
+            <li class="book" ng-repeat="book in books | filter:searchStr">
                 <div class="book-details clearfix">
                     <h4>{{book.name}}</h4>
                     <p>ID: {{book.id}}</p>
                     <ul class="list-unstyled list-inline">
-                        <li>Author : {{book.author}}</li>
+                        <li>Author : {{book.author | uppercase}}</li>
                         <li>Type : {{book.cat}}</li>
                         <li>Genre : {{book.genre_s}}</li>
                         <li>Price : {{book.price | currency:$}}</li>

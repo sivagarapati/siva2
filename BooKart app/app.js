@@ -1,10 +1,18 @@
-var app = angular.module("myApp", ["ngRoute"]);
+var app = angular.module("myApp", ["ngRoute", "ngAnimate"]);
 
-app.controller("headerCtrl", function($scope) {
-    $scope.appName = {
-        title: "BookART",
-        tagLine: "we have over 1 million Books"
-    };
+app.controller("headerCtrl", function($scope, $location) {
+    $scope.appName = {};
+    $scope.appName.title = "BookART";
+    $scope.appName.tagLine = "we have over 1 million Books";
+
+    $scope.nav = {};
+    $scope.nav.isActive = function(path) {
+        if (path === $location.path()) {
+            return true;
+        }
+        return false;
+    }
+
 });
 
 

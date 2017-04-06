@@ -8,6 +8,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-animate.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="app.js"></script>
 </head>
@@ -21,8 +22,8 @@
                     <span class="tagline pull-left">{{appName.tagLine}}</span>
                     <div class="nav-wrapper pull-left">
                         <ul class="nav nav-pills">
-                            <li class="active"><a href="#!/books">Books</a></li>
-                            <li><a href="#!/kart">Kart</a></li>
+                            <li ng-class="{active: nav.isActive('/books')}"><a href="#!/books">Books</a></li>
+                            <li ng-class="{active: nav.isActive('/kart')}"><a href="#!/kart">Kart</a></li>
                         </ul>
                     </div>
                 </div>

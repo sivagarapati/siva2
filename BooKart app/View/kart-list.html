@@ -2,7 +2,7 @@
     <p>Please click on buy button to buy the book.</p>
     <div class="row">
         <ul class="list-unstyled">
-            <li class="book" ng-repeat="book in kart">
+            <li class="book" ng-repeat="book in kart track by $index">
                 <div class="book-details clearfix">
                     <h4>{{book.name}}</h4>
                     <p>ID: {{book.id}}</p>
