@@ -16,7 +16,7 @@
                         <li>Genre : {{book.genre_s}}</li>
                         <li>Price : {{book.price | currency:$}}</li>
                     </ul>
-                    <button class="btn btn-info pull-right">Add to Cart</button>
+                    <button class="btn btn-info pull-right" ng-click="addToKart(book)">Add to Cart</button>
                 </div>
             </li>
         </ul>
